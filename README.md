@@ -37,3 +37,21 @@ We provide the trained models to reproduce the results that presented in our pap
 * [X-Net]() Extract code:  
 
 For detailed technical details, please see our paper and the released code.
+
+### Citation
+
+If you use this method or this code in your research, please cite as:
+
+    @inproceedings{XuleiKanshichao-2022,
+    title={X-Microscopy: Multicolor Super Resolution Image Reconstruction from Conventional Microscopy with Deep Learning},
+    author={Lei Xu, Shichao Kan, Xiying Yu, Yuxia Fu, Yiqiang Peng, Yanhui Liang, Yigang Cen, Changjun Zhu, Wei Jiang},
+    booktitle={},
+    pages={},
+    year={2022}
+    }
+
+### Acknowledgments
+This code is written based on the tensorflow framework of pix2pix. 
+
+### License
+This code is released for academic research / non-commercial use only. If you wish to use for commercial purposes, please contact [Wei Jiang]() by email wjiang6138@cicams.ac.cn, and [shichao kan] (https://faculty.csu.edu.cn/kanshichao/zh_CN/index.htm) by email kanshichao10281078@126.com
