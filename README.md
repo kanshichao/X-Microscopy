@@ -32,6 +32,7 @@ This package mainly depends on CUDA 10.0 and cudnn 7.
 ```
 git clone https://github.com/kanshichao/X-Microscopy
 cd X-Microscopy
+```
 
 ## Setting up the development environment
 * The folder of UR-Net-8 contains the sparse SRM reconstruction code, and change to this folder to perform wf->generated sparse.
@@ -40,20 +41,20 @@ cd X-Microscopy
 
 ## Instructions
 The parameter of --phase is to alternative the state of training or test, set as train for training and set as test for test.
-* For training:
++ For training:
 ```bash
 python main.py --phase train
 ```
-* For test: 
++ For test: 
 ```bash
 python main.py --phase test
 ```
 The parameter of --same_input_size is to alternative fixed input size or flexible input size during the training stage. If you want to run the code with fixed input size during the training stage, you shold set the value of --same_input_size as True, otherwise, set the value of --same_input_size as False.
-* For training or fine-tuning with fixed input size: 
++ For training or fine-tuning with fixed input size: 
 ```bash
 python main.py --phase train --same_input_size True
 ```
-* For training or fine-tuning with flexible input size: 
++ For training or fine-tuning with flexible input size: 
 ```bash
 python main.py --phase train --same_input_size False
 ```
@@ -61,8 +62,8 @@ The script of evaluate.py is used to evaluate the performances of SRM reconstruc
 ## Pretrained models
 We provide the trained models to reproduce the results that presented in our paper. 
 
-* [UR-Net-8](https://pan.baidu.com/s/13HrFmynyw-5cqNgXRx3oug) Extract Code: g77y
-* [X-Net](https://pan.baidu.com/s/1-NsUuty-3ifkR___a0dNuQ) Extract code:  mwuh
++ [UR-Net-8](https://pan.baidu.com/s/13HrFmynyw-5cqNgXRx3oug) Extract Code: g77y
++ [X-Net](https://pan.baidu.com/s/1-NsUuty-3ifkR___a0dNuQ) Extract code:  mwuh
 
 For detailed technical details, please see our paper and the released code.
 
