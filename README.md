@@ -1,14 +1,45 @@
 # X-Microscopy
 X-Microscopy: Multicolor Super Resolution Image Reconstruction from Conventional Microscopy with Deep Learning
-## Introduction
+## Overview
 This project is to produce the results of our paper: [X-Microscopy: Multicolor Super Resolution Image Reconstruction from Conventional Microscopy with Deep Learning](). We provide two training methods with fixed input size and flexible input size, as well as flexible input size test. The following is the instructions for using it.
 
+# System Requirements
+
+## Hardware requirements
+This code requires a standard computer with enough RAM to support the in-memory operations and the GeForce GTX 1080 GPU (The NVIDIA Inc.) to support GPU computing.
+
+
+## Software requirements
+### OS Requirements
+This package is supported for Linux. The package has been tested on the following systems:
++ Linux: Ubuntu 16.04
+
+### Python Dependencies
+This package mainly depends on the Python-2.7 scientific stack.
+```
+numpy
+scipy
+scikit-learn
+pandas
+tensorflow-1.13.1
+```
+### GPU Dependencies
+This package mainly depends on CUDA 10.0 and cudnn 7.
+
+# Installation Guide:
+
+### Install from Github
+```
+git clone https://github.com/kanshichao/X-Microscopy
+cd X-Microscopy
+
+## Setting up the development environment
+* The folder of UR-Net-8 contains the sparse SRM reconstruction code, and change to this folder to perform wf->generated sparse.
+* The folder of X-Net contains the perfect SRM reconstruction code, and change to this folder to perform wf+generated sparse->perfect.
+
+
 ## Instructions
-1. The training and test processes are based on python-2.7, TensorFlow1.13.1, CUDA10.0, cudnn7.
-2. Clone the code to your system.
-* The folder of UR-Net-8 contains the sparse SRM reconstruction code.
-* The folder of X-Net contains the perfect SRM reconstruction code.
-3. The parameter of --phase is to alternative the state of training or test, set as train for training and set as test for test.
+The parameter of --phase is to alternative the state of training or test, set as train for training and set as test for test.
 * For training:
 ```bash
 python main.py --phase train
@@ -17,7 +48,7 @@ python main.py --phase train
 ```bash
 python main.py --phase test
 ```
-6. The parameter of --same_input_size is to alternative fixed input size or flexible input size during the training stage. If you want to run the code with fixed input size during the training stage, you shold set the value of --same_input_size as True, otherwise, set the value of --same_input_size as False.
+The parameter of --same_input_size is to alternative fixed input size or flexible input size during the training stage. If you want to run the code with fixed input size during the training stage, you shold set the value of --same_input_size as True, otherwise, set the value of --same_input_size as False.
 * For training or fine-tuning with fixed input size: 
 ```bash
 python main.py --phase train --same_input_size True
@@ -26,13 +57,12 @@ python main.py --phase train --same_input_size True
 ```bash
 python main.py --phase train --same_input_size False
 ```
-7. If you want to test your trained model, please change the test path in test() of train.py, i.e., the path to obtain sample_files.
-8. The script of evaluate.py is used to evaluate the performances of SRM reconstruction, which is based on the realized verison of python. When you use it, please change the corresponding folder to yours.
+The script of evaluate.py is used to evaluate the performances of SRM reconstruction, which is based on the realized verison of python. When you use it, please change the corresponding folder to yours.
 ## Pretrained models
 We provide the trained models to reproduce the results that presented in our paper. 
 
-* [UR-Net-8]() Extract Code: 
-* [X-Net]() Extract code:  
+* [UR-Net-8](https://pan.baidu.com/s/13HrFmynyw-5cqNgXRx3oug) Extract Code: g77y
+* [X-Net](https://pan.baidu.com/s/1-NsUuty-3ifkR___a0dNuQ) Extract code:  mwuh
 
 For detailed technical details, please see our paper and the released code.
 
@@ -52,4 +82,4 @@ If you use this method or this code in your research, please cite as:
 This code is written based on the tensorflow framework of pix2pix. 
 
 ### License
-This code is released for academic research / non-commercial use only. If you wish to use for commercial purposes, please contact [Wei Jiang]() by email wjiang6138@cicams.ac.cn, and [Shichao Kan](https://faculty.csu.edu.cn/kanshichao/zh_CN/index.htm) by email kanshichao10281078@126.com
+This code is released for academic research / non-commercial use only. This project is covered under the Apache 2.0 License.
