@@ -8,9 +8,7 @@ This project is to produce the results of our paper: [X-Microscopy: Multicolor S
 2. Clone the code to your system.
 * The folder of UR-Net-8 contains the sparse SRM reconstruction code.
 * The folder of X-Net contains the perfect SRM reconstruction code.
-3. Copy your training samples into the folder of ./datasets/train/ and corresponding ground truth samples into the folder of ./datasets/train_gt/.
-4. Copy your validation samples into the folder of ./datasets/val/ and corresponding ground truth samples into the folder of ./datasets/val_gt/.
-5. The parameter of --phase is to alternative the state of training or test, set as train for training and set as test for test.
+3. The parameter of --phase is to alternative the state of training or test, set as train for training and set as test for test.
 * For training:
 ```bash
 python main.py --phase train
