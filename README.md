@@ -83,4 +83,4 @@ If you use this method or this code in your research, please cite as:
 This code is written based on the tensorflow framework of pix2pix. 
 
 ### License
-This code is released for academic research / non-commercial use only. This project is covered under the Apache 2.0 License.
+This code is released for academic research / non-commercial use only. This project is covered under the MIT License.
