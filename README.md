@@ -1,7 +1,7 @@
 # X-Microscopy
 X-Microscopy: Multicolor Super Resolution Image Reconstruction from Conventional Microscopy with Deep Learning
 ## Overview
-This project is to produce the results of our paper: [X-Microscopy: Multicolor Super Resolution Image Reconstruction from Conventional Microscopy with Deep Learning](). We provide two training methods with fixed input size and flexible input size, as well as flexible input size test. The following is the instructions for using it.
+This project is to produce the results of our paper: [X-Microscopy: Multicolor Super Resolution Image Reconstruction from Conventional Microscopy with Deep Learning](https://www.researchsquare.com/article/rs-1256986/v1). We provide two training methods with fixed input size and flexible input size, as well as flexible input size test. The following is the instructions for using it.
 
 # System Requirements
 
