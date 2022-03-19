@@ -35,8 +35,8 @@ cd X-Microscopy
 ```
 
 ## Setting up the development environment
-* The folder of UR-Net-8 contains the sparse SRM reconstruction code, and change to this folder to perform wf->generated sparse.
-* The folder of X-Net contains the perfect SRM reconstruction code, and change to this folder to perform wf+generated sparse->perfect.
+* The folder of UR-Net-8 contains the R-SRM reconstruction code, and change to this folder to perform wf->U-SRM.
+* The folder of X-Net contains the F-SRM reconstruction code, and change to this folder to perform wf+RU-SRM->F-SRM.
 
 
 ## Instructions
