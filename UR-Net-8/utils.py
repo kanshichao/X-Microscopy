@@ -49,13 +49,13 @@ def load_gt_image(image_path,reg=True):
 def load_gt_image_ksc(image_path,reg=True):
     num_ge = 10
     new_n = random.randint(1, num_ge)
-    # image_path_gt = image_path + '/dense/1-' + str(new_n) + '.tif'
-    image_path_gt = image_path + '/sparse/1-' + str(new_n) + '.tif'
+    # image_path_gt = image_path + '/W-SRM/1-' + str(new_n) + '.tif'
+    image_path_gt = image_path + '/U-SRM/1-' + str(new_n) + '.tif'
     image = imread(image_path_gt)
     for i in range(0,2):
         new_n = random.randint(1, num_ge)
-        # image_path_gt = image_path + '/dense/1-' + str(new_n) + '.tif'
-        image_path_gt = image_path + '/sparse/1-' + str(new_n) + '.tif'
+        # image_path_gt = image_path + '/W-SRM/1-' + str(new_n) + '.tif'
+        image_path_gt = image_path + '/U-SRM/1-' + str(new_n) + '.tif'
         image1 = imread(image_path_gt)
         image[:,:,i+1] = image1[:,:,0]
     if reg:
