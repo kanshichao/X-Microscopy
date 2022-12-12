@@ -559,8 +559,8 @@ class pix2pix(object):
 
 
                             #generated sparse
-                            sample_sparse_img = fl[:-6] + 'wf-to-generated-sparse/generated-sparse.tif'
-                            # sample_sparse_img = fl[:-6] + 'sparse-generated.tif'
+                            sample_sparse_img = fl[:-6] + 'MU-SRM/MU-SRM.tif'
+                            # sample_sparse_img = fl[:-6] + 'MU-SRM.tif'
                             image2 = scipy.misc.imread(sample_sparse_img).astype('uint8')
 
                             # sparse + sparse
@@ -609,10 +609,10 @@ class pix2pix(object):
                                 image_b = np.array(sampleb[0]).astype(np.float32)
                                 image_f = np.array(sample_fusion[0]).astype(np.float32)
 
-                                # folder = 'wf+sparse-to-SRM-desired_output/'
-                                # folder = 'sparse+sparse-to-SRM-desired_output/'
-                                folder = 'wf+generated-sparse-to-SRM-desired_output/'
-                                # folder = 'generated-sparse+generated-sparse-to-SRM-desired_output/'
+                                # folder = 'wf+U-SRM-to-SRM-desired_output/'
+                                # folder = 'U-SRM+U-SRM-to-SRM-desired_output/'
+                                folder = 'wf+MU-SRM-to-SRM-desired_output/'
+                                # folder = 'MU-SRM+MU-SRM-to-SRM-desired_output/'
                                 # folder = 'wf+wf-to-SRM-desired_output/'
 
                                 if not os.path.exists(fl[:-6] + folder):
