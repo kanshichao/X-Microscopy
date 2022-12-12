@@ -75,7 +75,7 @@ def load_gt_image(image_path,reg=True):
 def load_gt_image_ksc(image_path,reg=True):
     num_ge = 10
     new_n = random.randint(1, num_ge)
-    image_path_val = image_path + '/dense/1-' + str(new_n) + '.tif'
+    image_path_val = image_path + '/W-SRM/1-' + str(new_n) + '.tif'
     image = imread(image_path_val)
     if image.ndim == 2:
         img_BB = np.zeros((image.shape[0], image.shape[1], 3))
@@ -83,7 +83,7 @@ def load_gt_image_ksc(image_path,reg=True):
         image = img_BB
     for i in range(2):
         new_n = random.randint(1, num_ge)
-        image_path_val = image_path + '/dense/1-' + str(new_n) + '.tif'
+        image_path_val = image_path + '/W-SRM/1-' + str(new_n) + '.tif'
         img_B1 = imread(image_path_val)
         if img_B1.ndim == 2:
             img_BB = np.zeros((img_B1.shape[0], img_B1.shape[1], 3))
@@ -106,7 +106,7 @@ def load_sparse_image_ksc(image_path,reg=True):
     select_prob = 2
     if select_prob == 1:
         new_n = random.randint(1, num_ge)
-        image_path_val = image_path + '/sparse/1-' + str(new_n) + '.tif'
+        image_path_val = image_path + '/U-SRM/1-' + str(new_n) + '.tif'
         image = imread(image_path_val)
         if image.ndim == 2:
             img_BB = np.zeros((image.shape[0], image.shape[1], 3))
@@ -116,11 +116,11 @@ def load_sparse_image_ksc(image_path,reg=True):
         image[:, :, 2] = image[:, :, 0]
         # for i in range(2):
         #     new_n = random.randint(1, 30)
-        #     image_path_val = image_path + '/sparse/1-' + str(new_n) + '.tif'
+        #     image_path_val = image_path + '/U-SRM/1-' + str(new_n) + '.tif'
         #     img_B1 = imread(image_path_val)
         #     image[:, :, i + 1] = img_B1[:, :, 0]
     else:
-        image_path_val = image_path + '/sparse-generated/1sparse-generated.tif'
+        image_path_val = image_path + '/MU-SRM/MU-SRM.tif'
         image = imread(image_path_val)
         # image[:, :, 1] = image[:, :, 0]
         # image[:, :, 2] = image[:, :, 0]
@@ -210,8 +210,8 @@ def load_ge_image(image_path):
     file_basename = os.path.splitext(image_path)  # ['','.tif']
     # print(file_basename)
     # print(file_basename[0].split('000'))
-    number = int(file_basename[0].split('000')[-1])  # 提取序号
-    n = (number - 1) // 30 + 1  # 找到组号
+    number = int(file_basename[0].split('000')[-1])  # extract code
+    n = (number - 1) // 30 + 1  # find group number
     new_n = 1 + (n - 1) * 30
     image_path_new = file_basename[0].split('000')[0] + '000' + str(new_n) + '.tif'
     if 'train' in image_path:
@@ -257,7 +257,7 @@ def load_image_random_ksc(image_path):
     select_prob = 2
     if select_prob == 1:
         new_n = random.randint(1, num_ge)
-        image_path_val = image_path + '/sparse/1-' + str(new_n) + '.tif'
+        image_path_val = image_path + '/U-SRM/1-' + str(new_n) + '.tif'
         img_B = imread(image_path_val)
         if img_B.ndim == 2:
             img_BB = np.zeros((img_B.shape[0], img_B.shape[1], 3))
@@ -267,18 +267,18 @@ def load_image_random_ksc(image_path):
         img_B[:, :, 2] = img_B[:, :, 0]
         # for i in range(2):
         #     new_n = random.randint(1, 30)
-        #     image_path_val = image_path + '/sparse/1-' + str(new_n) + '.tif'
+        #     image_path_val = image_path + '/U-SRM/1-' + str(new_n) + '.tif'
         #     img_B1 = imread(image_path_val)
         #     img_B[:,:,i+1] = img_B1[:,:,0]
     else:
-        image_path_val = image_path + '/sparse-generated/1sparse-generated.tif'
+        image_path_val = image_path + '/MU-SRM/MU-SRM.tif'
         img_B = imread(image_path_val)
         # img_B[:,:,1] = img_B[:,:,0]
         # img_B[:, :, 2] = img_B[:, :, 0]
     # img_B = img_A
     # img_A = img_B
     new_n = random.randint(1, num_ge)
-    image_path_gt = image_path + '/dense/1-' + str(new_n) + '.tif'
+    image_path_gt = image_path + '/W-SRM/1-' + str(new_n) + '.tif'
     img_gt = imread(image_path_gt)
     if img_gt.ndim==2:
         img_gta = np.zeros((img_gt.shape[0], img_gt.shape[1], 3))
@@ -286,7 +286,7 @@ def load_image_random_ksc(image_path):
         img_gt = img_gta
     for i in range(2):
         new_n = random.randint(1, num_ge)
-        image_path_gt = image_path + '/dense/1-' + str(new_n) + '.tif'
+        image_path_gt = image_path + '/W-SRM/1-' + str(new_n) + '.tif'
         img_B1 = imread(image_path_gt)
         if img_B1.ndim == 2:
             img_BB = np.zeros((img_B1.shape[0], img_B1.shape[1], 3))
