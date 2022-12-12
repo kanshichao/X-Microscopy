@@ -82,7 +82,7 @@ def main(_):
                     img_A = imread(image_path_train)
 
                     # new_n = random.randint(1, 30)
-                    # image_path_val = image_path + '/sparse/1-' + str(new_n) + '.tif'
+                    # image_path_val = image_path + '/U-SRM/1-' + str(new_n) + '.tif'
                     # img_B1 = imread(image_path_val)
                     if img_A.ndim==2:
                         img_AA = np.zeros((img_A.shape[0],img_A.shape[1],3))
@@ -92,14 +92,14 @@ def main(_):
                         img_A = img_AA
                     num_ge = 10
                     new_n = random.randint(1, num_ge)
-                    # image_path_val = image_path + '/dense/1-' + str(new_n) + '.tif'
-                    image_path_val = image_path + '/sparse/1-' + str(new_n) + '.tif'
+                    # image_path_val = image_path + '/W-SRM/1-' + str(new_n) + '.tif'
+                    image_path_val = image_path + '/U-SRM/1-' + str(new_n) + '.tif'
                     img_B = imread(image_path_val)
 
                     for i in range(0, 2):
                         new_n = random.randint(1, num_ge)
-                        # image_path_val = image_path + '/dense/1-' + str(new_n) + '.tif'
-                        image_path_val = image_path + '/sparse/1-' + str(new_n) + '.tif'
+                        # image_path_val = image_path + '/W-SRM/1-' + str(new_n) + '.tif'
+                        image_path_val = image_path + '/U-SRM/1-' + str(new_n) + '.tif'
                         img_B1 = imread(image_path_val)
                         img_B[:, :, i + 1] = img_B1[:, :, 0]
 
