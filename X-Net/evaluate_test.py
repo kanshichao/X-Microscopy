@@ -10,7 +10,7 @@ sample_files = sorted(glob('/media/ksc/code/tubulin-model-data/tubulin-model-3/m
 #     dir = sample_file + '/'
 #     filelist = get_filelist(dir, [])
 #     for fl in filelist:
-#         if 'log_scores_wf+sparse-to-SRM.txt' in fl:
+#         if 'log_scores_wf+U-SRM-to-SRM.txt' in fl:
 #             if os.path.exists(fl):
 #                 os.remove(fl)
 count = 0
@@ -23,8 +23,8 @@ for sample_file in sample_files:
         if 'perfect.tif' in fl and 'post/' not in fl:
             print(fl)
             image1 = scipy.misc.imread(fl)
-            compare_files = sorted(glob(fl[:-11]+'wf+generated-sparse-to-SRM-desired_output/*'))
-            logger = setup_logger("evaluate{}".format(count), fl[:-11], filename='log_scores_wf+generated-sparse-to-SRM.txt')
+            compare_files = sorted(glob(fl[:-11]+'wf+MR-SRM-to-SRM-desired_output/*'))
+            logger = setup_logger("evaluate{}".format(count), fl[:-11], filename='log_scores_wf+MU-SRM-to-SRM.txt')
             count += 1
             for cfl in compare_files:
                 # if not ('wf.tif' in cfl or 'log_scores.txt' in cfl):
