@@ -338,10 +338,10 @@ class pix2pix(object):
                                                             3])
                         img_name =fl[:-6]
 
-                        img_name = img_name + 'wf-to-generated-sparse/'
+                        img_name = img_name + 'MU-SRM/'
                         if not os.path.exists(img_name):
                             os.makedirs(img_name)
-                        img_name = img_name + 'generated-sparse.tif'
+                        img_name = img_name + 'MU-SRM.tif'
                         if self.withbn:
                             dehaze_image,hazemap = self.pix_model.inference(hazed_image_placeholder,batch_size=1, h=image1.shape[0], w=image1.shape[1])
 
