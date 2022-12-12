@@ -1,7 +1,7 @@
 # X-Microscopy
-X-Microscopy: Multicolor Super Resolution Image Reconstruction from Conventional Microscopy with Deep Learning
+Superresolution Image Reconstruction from Conventional Microscopy with Deep Learning
 ## Overview
-This project is to produce the results of our paper: [X-Microscopy: Multicolor Super Resolution Image Reconstruction from Conventional Microscopy with Deep Learning](https://www.researchsquare.com/article/rs-1256986/v1). We provide two training methods with fixed input size and flexible input size, as well as flexible input size test. The following is the instructions for using it.
+This project is to produce the results of our paper: [Superresolution Image Reconstruction from Conventional Microscopy with Deep Learning](https://www.researchsquare.com/article/rs-1256986/v1). We provide two training methods with fixed input size and flexible input size, as well as flexible input size test. The following is the instructions for using it.
 
 # System Requirements
 
@@ -15,7 +15,7 @@ This package is supported for Linux. The package has been tested on the followin
 + Linux: Ubuntu 16.04
 
 ### Python Dependencies
-This package mainly depends on the Python-2.7 scientific stack.
+This package mainly depends on the Python-3.6.4 scientific stack.
 ```
 numpy
 scipy
@@ -35,11 +35,14 @@ cd X-Microscopy
 ```
 
 ## Setting up the development environment
-* The folder of UR-Net-8 contains the R-SRM reconstruction code, and change to this folder to perform wf->U-SRM.
-* The folder of X-Net contains the F-SRM reconstruction code, and change to this folder to perform wf+RU-SRM->F-SRM.
+* The folder of UR-Net-8 contains the MU-SRM reconstruction code, and change to this folder to perform wf->MU-SRM.
+* The folder of X-Net contains the F-SRM reconstruction code, and change to this folder to perform wf+MU-SRM->F-SRM.
 
 
 ## Instructions
+When you use this code, please change the corresponding folder in the code to yours.
+
+
 The parameter of --phase is to alternative the state of training or test, set as train for training and set as test for test.
 + For training:
 ```bash
@@ -72,7 +75,7 @@ For detailed technical details, please see our paper and the released code.
 If you use this method or this code in your research, please cite as:
 
     @inproceedings{XuleiKanshichao-2022,
-    title={X-Microscopy: Multicolor Super Resolution Image Reconstruction from Conventional Microscopy with Deep Learning},
+    title={Superresolution Image Reconstruction from Conventional Microscopy with Deep Learning},
     author={Lei Xu, Shichao Kan, Xiying Yu, Yuxia Fu, Yiqiang Peng, Yanhui Liang, Yigang Cen, Changjun Zhu, Wei Jiang},
     booktitle={},
     pages={},
