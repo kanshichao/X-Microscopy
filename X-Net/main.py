@@ -109,7 +109,7 @@ def main(_):
                     select_prob = 2
                     if select_prob == 1:
                         new_n = random.randint(1, num_de)
-                        image_path_val = image_path + '/sparse/1-' + str(new_n) + '.tif'
+                        image_path_val = image_path + '/U-SRM/1-' + str(new_n) + '.tif'
                         img_B = imread(image_path_val)
                         if img_B.ndim == 2:
                             img_BB = np.zeros((img_B.shape[0], img_B.shape[1], 3))
@@ -118,7 +118,7 @@ def main(_):
                         img_B[:,:,1] = img_B[:,:,0]
                         img_B[:,:,2] = img_B[:,:,0]
                     else:
-                        image_path_val = image_path + '/sparse-generated/1sparse-generated.tif'
+                        image_path_val = image_path + '/MU-SRM/MU-SRM.tif'
                         img_B = imread(image_path_val)
 
                     # img_B = img_A
@@ -126,7 +126,7 @@ def main(_):
                     # img_A = img_B
 
                     new_n = random.randint(1, num_de)
-                    image_path_gt = image_path + '/dense/1-' + str(new_n) + '.tif'
+                    image_path_gt = image_path + '/W-SRM/1-' + str(new_n) + '.tif'
                     img_gt = imread(image_path_gt)
                     if img_gt.ndim == 2:
                         img_BB = np.zeros((img_gt.shape[0], img_gt.shape[1], 3))
@@ -134,7 +134,7 @@ def main(_):
                         img_gt = img_BB
                     for rani in range(2):
                         new_n = random.randint(1, num_de)
-                        image_path_gt = image_path + '/dense/1-' + str(new_n) + '.tif'
+                        image_path_gt = image_path + '/W-SRM/1-' + str(new_n) + '.tif'
                         img_gt1 = imread(image_path_gt)
                         if img_gt1.ndim == 2:
                             img_BB = np.zeros((img_gt1.shape[0], img_gt1.shape[1], 3))
