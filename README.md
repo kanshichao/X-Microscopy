@@ -40,8 +40,7 @@ cd X-Microscopy
 
 
 ## Instructions
-When you use this code, please change the corresponding folder in the code to yours.
-
+When you use this code, please change the corresponding folder in the code to yours, i.e., the data path in the train, evaluate, and test functions of the train.py, and in the main function of the main.py. 
 
 The parameter of --phase is to alternative the state of training or test, set as train for training and set as test for test.
 + For training:
