@@ -64,8 +64,7 @@ The script of evaluate.py is used to evaluate the performances of SRM reconstruc
 ## Pretrained models
 We provide the trained models to reproduce the results that presented in our paper. 
 
-+ [UR-Net-8](https://pan.baidu.com/s/13HrFmynyw-5cqNgXRx3oug) Extract Code: g77y
-+ [X-Net](https://pan.baidu.com/s/1-NsUuty-3ifkR___a0dNuQ) Extract code:  mwuh
++ [Google Drive](https://drive.google.com/drive/folders/10qa3pDrdiDYTlvIwJJ8FGGESyQ168akc?usp=sharing)
 
 For detailed technical details, please see our paper and the released code.
 
