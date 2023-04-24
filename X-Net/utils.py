@@ -456,6 +456,24 @@ def preprocess_A_and_B(img_A, img_B,img_gt,load_size=286, fine_size=256, flip=Tr
         img_gt = img_gt[:,:,None]
     return img_A, img_B, img_gt
 
+import cv2
+def change_contrast(img,coefficent):
+    img = cv2.cvtColor(np.asarray(img),cv2.COLOR_RGB2BGR)
+    imggray = cv2.cvtColor(img,cv2.COLOR_BGR2GRAY)
+    m = cv2.mean(img)[0]
+    graynew = m + coefficent*(imggray - m)
+    img1 = np.zeros(img.shape,np.float32)
+    k = np.divide(graynew,imggray,out=np.zeros_like(graynew),where=imggray!=0)
+    img1[:,:,0] = img[:,:,0]*k
+    img1[:, :, 1] = img[:, :, 1] * k
+    img1[:, :, 2] = img[:, :, 2] * k
+    img1[img1 > 255] = 255
+    img1[img1 < 0] = 0
+    img1[img1 < 30] = 0
+    img1 = im.fromarray(cv2.cvtColor(img1.astype(np.uint8),cv2.COLOR_BGR2RGB))
+    return img1
+    # return img1.astype(np.uint8)
+
 def save_images_val(images, image_path,reg=True,mode='RGB'):
     if reg:
         images = images * 255.
@@ -476,6 +494,7 @@ def save_images_val(images, image_path,reg=True,mode='RGB'):
     images = tf.saturate_cast(images, tf.uint8)
     images = images.eval(session = sess)
     result_image = im.fromarray(images,mode=mode)
+    result_image = change_contrast(result_image, 1.40)
     result_image.save(image_path)
 
 # def save_images_test(images, sess, image_path):
