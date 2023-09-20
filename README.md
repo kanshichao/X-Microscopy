@@ -1,7 +1,7 @@
 # X-Microscopy
-Superresolution Image Reconstruction from Conventional Microscopy with Deep Learning
+Deep learning enables STORM-like superresolution image reconstruction from conventional microscopy
 ## Overview
-This project is to produce the results of our paper: [Superresolution Image Reconstruction from Conventional Microscopy with Deep Learning](https://www.researchsquare.com/article/rs-1256986/v1). We provide two training methods with fixed input size and flexible input size, as well as flexible input size test. The following is the instructions for using it.
+This project is to produce the results of our paper: [Deep learning enables STORM-like superresolution image reconstruction from conventional microscopy](https://www.researchsquare.com/article/rs-1256986/v1). We provide two training methods with fixed input size and flexible input size, as well as flexible input size test. The following is the instructions for using it.
 
 # System Requirements
 
@@ -73,11 +73,11 @@ For detailed technical details, please see our paper and the released code.
 If you use this method or this code in your research, please cite as:
 
     @inproceedings{XuleiKanshichao-2022,
-    title={Superresolution Image Reconstruction from Conventional Microscopy with Deep Learning},
+    title={Deep learning enables STORM-like superresolution image reconstruction from conventional microscopy},
     author={Lei Xu, Shichao Kan, Xiying Yu, Yuxia Fu, Yiqiang Peng, Yanhui Liang, Yigang Cen, Changjun Zhu, Wei Jiang},
     booktitle={},
     pages={},
-    year={2022}
+    year={2023}
     }
 
 ### Acknowledgments
